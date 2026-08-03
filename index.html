@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataV | Premium Data Access for Modern Teams</title>
+    <meta
+      name="description"
+      content="DataV delivers trusted datasets, flexible API access, and premium support for businesses that need reliable data at scale."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <a class="brand" href="#">DataV</a>
+        <div class="nav-links">
+          <a href="#value">Value</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#support">Support</a>
+          <a href="#tracking-form">Track Order</a>
+        </div>
+        <a class="button button-dark" href="#pricing">Get Started</a>
+      </nav>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Trusted bundles • Fast support • Simple checkout</p>
+          <h1>Reliable data bundles for everyday connection.</h1>
+          <p class="lead">
+            DataV helps you browse, stream, and stay connected with flexible bundle options
+            from Ghana’s leading mobile networks.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pricing">View Pricing</a>
+            <a class="button button-secondary" href="#support">Get Support</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>24/7</strong>
+              <span>support</span>
+            </div>
+            <div>
+              <strong>Fast</strong>
+              <span>bundle access</span>
+            </div>
+            <div>
+              <strong>Ghana</strong>
+              <span>wide coverage</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-slideshow" aria-label="Featured network bundle images">
+          <img src="images/3D%20MTN%20logo.jfif" alt="MTN logo" class="slide active" />
+          <img src="images/3D%20telecel%20logo.jfif" alt="Telecel logo" class="slide" />
+          <img src="images/Activating%20your%20AirtelTigo%20eSIM%20is%20simple.jfif" alt="AirtelTigo eSIM activation" class="slide" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="value" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Why DataV</p>
+          <h2>Clear value at every stage of your data journey.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Fast setup</h3>
+            <p>Get your first dataset live within minutes with guided onboarding.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Flexible pricing</h3>
+            <p>Scale from prototyping to enterprise usage without hidden fees.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Trusted delivery</h3>
+            <p>Clean data, audit trails, and transparent licensing in one place.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="pricing" class="section section-dark">
+        <div class="container">
+          <div class="section-heading light">
+            <p class="eyebrow">Data Pricing</p>
+            <h2>Choose a data package from Ghana’s leading networks.</h2>
+          </div>
+          <div class="pricing-grid">
+            <article class="pricing-card featured">
+              <div class="tag">Popular</div>
+              <h3>MTN</h3>
+              <p class="price">1GB FOR GH₵4.4<span>/bundle</span></p>
+              <ul>
+                <li>Reliable nationwide coverage</li>
+                <li>Fast browsing and social data</li>
+                <li>Great for daily use</li>
+              </ul>
+              <div class="pricing-actions">
+                <a class="button button-primary" href="mtn.html">Buy MTN Bundle</a>
+              </div>
+            </article>
+            <article class="pricing-card">
+              <h3>AirtelTigo</h3>
+              <p class="price">1GB FOR GH₵3.9<span>/bundle</span></p>
+              <ul>
+                <li>Balanced speed and affordability</li>
+                <li>Flexible daily and weekly options</li>
+                <li>Ideal for students and families</li>
+              </ul>
+                <a class="button button-primary" href="airteltigo.html">Buy AirtelTigo Bundle</a>
+            </article>
+            <article class="pricing-card">
+              <h3>Telecel</h3>
+              <p class="price">1GB FOR GH₵4.5<span>/bundle</span></p>
+              <ul>
+                <li>Budget-friendly data option</li>
+                <li>Easy topping up and support</li>
+                <li>Perfect for light browsing</li>
+              </ul>
+              <div class="pricing-actions">
+                <a class="button button-primary" href="telecel.html">Buy Telecel Bundle</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">Order Tracking</p>
+          <h2>Check the status of your bundle request.</h2>
+        </div>
+        <div class="tracking-card">
+          <form id="tracking-form" class="tracking-form">
+            <label for="order-id">Enter your order ID</label>
+            <div class="tracking-input-row">
+              <input id="order-id" name="order-id" type="text" placeholder="e.g. DATAV-1024" required />
+              <button class="button button-primary" type="submit">Track Order</button>
+            </div>
+          </form>
+          <div id="tracking-status" class="tracking-status" aria-live="polite">
+            Enter an order ID to see its status.
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="section section-dark support-section">
+        <div class="container">
+          <div class="section-heading light">
+            <p class="eyebrow">Customer Support</p>
+            <h2>Talk to us however you prefer.</h2>
+          </div>
+          <div class="support-grid">
+            <a class="support-card" href="https://wa.me/+233247980443" target="_blank" rel="noreferrer">
+              <h3>WhatsApp</h3>
+              <p>Chat with our team in real time.</p>
+            </a>
+            <a class="support-card" href="mailto:officialxmedia1@gmail.com">
+              <h3>Email</h3>
+              <p>Reach us at officialxmedia1@gmail.com for plans and onboarding.</p>
+            </a>
+            <a class="support-card" href="tel:+233247980443">
+              <h3>Call</h3>
+              <p>Speak with a specialist at +233247980443.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-row">
+        <center><p>© <span id="year"></span> DataV. Premium data access for ambitious teams.</center></p>
+        <a href="#">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Successful | DataV</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="section container" style="min-height: 80vh; display: grid; place-items: center;">
+      <div class="panel-card" style="max-width: 640px; padding: 2rem; text-align: center;">
+        <p class="eyebrow">Payment status</p>
+        <h1>Payment received.</h1>
+        <p id="status-message">Your Paystack transaction was verified successfully. Your bundle request will be handled shortly.</p>
+        <p><strong>Reference:</strong> <span id="reference-value">N/A</span></p>
+        <a class="button button-primary" href="index.html">Return home</a>
+      </div>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const reference = params.get('reference') || 'N/A';
+      document.getElementById('reference-value').textContent = reference;
+      const status = params.get('status');
+      if (status === 'success') {
+        document.getElementById('status-message').textContent = 'Your Paystack transaction was verified successfully. Your bundle request will be handled shortly.';
+      }
+    </script>
+  </body>
+</html>
