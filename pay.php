@@ -1,4 +1,5 @@
 <?php
+
 function verifyPaystackTransaction($reference, $secretKey)
 {
     $ch = curl_init('https://api.paystack.co/transaction/verify/' . rawurlencode($reference));
@@ -27,9 +28,10 @@ $secretKey = getenv('PAYSTACK_SECRET_KEY') ?: 'sk_test_eaa430b7dcbeff4dfb3222e97
 $provider = isset($_GET['provider']) ? strtolower(trim($_GET['provider'])) : 'mtn';
 $bundle = isset($_GET['bundle']) ? trim($_GET['bundle']) : '1GB';
 $amount = isset($_GET['amount']) ? (int)$_GET['amount'] : 450;
-$email = isset($_GET['email']) && filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)
+    $email = isset($_GET['email']) && filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)
     ? $_GET['email']
     : 'customer@example.com';
+
 $reference = strtoupper($provider . '-' . preg_replace('/[^A-Za-z0-9]/', '', $bundle) . '-' . time());
 
 $baseUrl = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://') . ($_SERVER['HTTP_HOST'] ?? 'localhost');
